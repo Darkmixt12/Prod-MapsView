@@ -1,0 +1,56 @@
+
+
+<button *ngIf="itemHijo?._id" class="btnCloseCard material-symbols-outlined" (click)="hideCardClient()">close</button>
+<br>
+<div *ngIf="itemHijo?._id" class=" containerClient">
+	
+	<img src="{{itemHijo?.image}}" alt="">
+	<section class="titles">
+		<h1> {{itemHijo?.title}} </h1>
+	</section>
+
+	<hr>
+
+	<div class="btnMenu">
+		<div *ngIf="itemHijo?.facebook" class="btnEdit">
+			<a href="{{itemHijo?.facebook}}"  target="_blank" class="btnFacebook pi pi-facebook"></a>
+		</div>
+		<div *ngIf="itemHijo?.instagram" class="btnAdd">
+			<a href="{{itemHijo?.instagram}}"  target="_blank" class="btnInstagram pi pi-instagram"></a>
+		</div>
+		<div *ngIf="itemHijo?.whatsApp" class="btnDel">
+			<a href="{{itemHijo?.whatsApp}}"  target="_blank" class="btnWhatsApp pi pi-whatsapp"></a>
+		</div>
+		<div *ngIf="itemHijo?.webPage" class="btnDel">
+			<a  href="{{itemHijo?.webPage}}"  target="_blank" class="btnWeb pi pi-globe"></a>
+		</div>
+	</div>
+	<br>
+
+	<section class="descriptionList">
+
+		<div *ngif="itemHijo?.driveToLocation" >
+			<span class="material-symbols-outlined">location_on</span>
+			<a  href="{{itemHijo?.driveToLocation}}"  target="_blank"> Obtener dirección</a>
+		</div>
+
+		<ul >
+			<li *ngIf="itemHijo?.driveToLocation">
+				<span class="material-symbols-outlined">location_on</span>
+				<a  href="{{itemHijo?.driveToLocation}}"  target="_blank"> Obtener dirección</a>
+			</li>
+			<li>
+				<span class="material-symbols-outlined">call</span>
+				<p> {{itemHijo?.telefono}} </p>
+			</li>
+			<li>
+				<span class="material-symbols-outlined">mail</span>
+				<p> {{itemHijo?.email}} </p>
+			</li>
+			<li>
+				<span class="material-symbols-outlined">hallway</span>
+				<p> {{itemHijo?.description}} </p>
+			</li>
+		</ul>
+	</section>
+</div>

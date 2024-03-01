@@ -8,6 +8,6 @@ import { RouterModule } from '@angular/router';
   templateUrl: './maps-layout.component.html',
   styleUrl: './maps-layout.component.css'
 })
-export class MapsLayoutComponent {
+export default class MapsLayoutComponent {
 
 }
